@@ -40,6 +40,11 @@ INSTALLED_APPS = [
 
     #My Apps
     'contributors',
+    'users',
+
+    #3rd Party Apps
+    'bootstrap3',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +126,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+#Settings for bootstrap
+BOOTSTRAP3 = {
+    'include_jquery': True,
+}

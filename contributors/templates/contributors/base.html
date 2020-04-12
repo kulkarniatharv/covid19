@@ -1,7 +1,30 @@
-Hello
-<a href="{% url 'contributors:register' %}">register</a> -
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    {% load bootstrap3 %}
+
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+
+<p>Hello
+    {% if user.is_authenticated %}
+        Hello, {{ user.username }}
+        <a href="{% url 'users:logout' %}">log out</a>
+    {% else %}
+        <a href="{% url 'users:register' %}">register</a>
+        <a href="{% url 'users:login' %}">log in</a>
+    {% endif %}
+
 
 {% block content %}
 
 
 {% endblock content %}
+</body>
+</html>

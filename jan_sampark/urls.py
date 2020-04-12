@@ -21,4 +21,5 @@ urlpatterns = [
 
     #My App
     path('', include('contributors.urls', namespace='contributors')),
+    path('users/', include('users.urls', namespace='users')),
 ]
