@@ -1,21 +1,21 @@
 {% extends "contributors/base.html" %}
 {% load bootstrap3 %}
-{% load crispy_forms_tags %}
+
+{% block header %}
+<h2>Log in to your account</h2>
+{% endblock header %}
 
 {% block content %}
 
-{% if forms.errors %}
-<p>Your username and pasword didnt match</p>
-{% endif %}
 
-<form action="{% url 'users:login' %}" method="post">
+<form action="{% url 'users:login' %}" method="post" class="form">
     {% csrf_token %}
-    {% crispy form %}
+    {% bootstrap_form form %}
 
     {% buttons %}
         <button name="submit" class="btn btn-primary">log in</button>
     {% endbuttons %}
     <input type="hidden" name="next" value="{% url 'contributors:index' %}" />
 </form>
-py
+
 {% endblock content %}
