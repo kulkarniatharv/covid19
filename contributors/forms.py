@@ -6,5 +6,4 @@ class RetailerForm(forms.ModelForm):
     class Meta:
         model = Retailer
         fields = ['company_name', 'product', 'quantity']
-        labels = {'company_name': 'company', 'product': 'product', 'quantity':
-            'quantity'}
+        labels = {'company_name': 'company', 'product': 'product', 'quantity': 'quantity'}

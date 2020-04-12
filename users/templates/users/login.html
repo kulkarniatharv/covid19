@@ -1,5 +1,6 @@
 {% extends "contributors/base.html" %}
 {% load bootstrap3 %}
+<<<<<<< Updated upstream
 
 {% block header %}
 <h2>Log in to your account</h2>
@@ -11,6 +12,7 @@
 <form action="{% url 'users:login' %}" method="post" class="form">
     {% csrf_token %}
     {% bootstrap_form form %}
+
 
     {% buttons %}
         <button name="submit" class="btn btn-primary">log in</button>

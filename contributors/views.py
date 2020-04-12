@@ -9,6 +9,7 @@ from .forms import RetailerForm
 def index(request):
     return render(request, 'contributors/index.html')
 
+
 def get_data(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
